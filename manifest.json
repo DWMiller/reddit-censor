@@ -1,7 +1,7 @@
 {
   "name": "Redit Censor",
   "description": "Censors reddit usernames for easily anonymized screenshots",
-  "version": "2.0",
+  "version": "1.0",
   "permissions": ["activeTab"],
   "background": {
     "scripts": ["index.js"],
