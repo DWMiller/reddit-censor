@@ -1,5 +1,5 @@
 {
-  "name": "Redit Censor",
+  "name": "Reddit Censor",
   "description": "Censors reddit usernames for easily anonymized screenshots",
   "version": "1.0",
   "permissions": ["activeTab"],
