@@ -1,0 +1,17 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+  body { display: grid; grid-template-columns: 560px 1fr; align-items: center; }
+  .left { padding: 0 0 0 80px; display: flex; flex-direction: column; gap: 24px; }
+  .logo { width: 96px; height: 96px; }
+  .headline { font-size: 58px; }
+  .sub { font-size: 24px; }
+  .pane { padding: 0 60px 0 30px; }
+</style></head><body class="brand">
+  <div class="left">
+    <img class="logo" src="icon-small.svg">
+    <div class="headline">Screenshot.<br><span class="accent">No names.</span></div>
+    <div class="sub">Hide every Reddit username with one click.</div>
+  </div>
+  <div class="pane"><div class="thread" data-count="4" data-censored></div></div>
+  <script src="thread.js"></script>
+</body></html>

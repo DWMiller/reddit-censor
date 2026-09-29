@@ -1,0 +1,30 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>new reddit fixture</title></head>
+<body>
+  <!-- Shapes copied from new reddit: custom elements, slotted links, a link inside a shadow root -->
+  <shreddit-post author="alice">
+    <span slot="credit-bar"><a id="post-author" class="author-name" href="/user/alice/">alice</a></span>
+    <a id="post-link" href="/r/test/comments/abc/title/">A post title</a>
+  </shreddit-post>
+  <shreddit-comment author="bob">
+    <a id="avatar" slot="commentAvatar" href="/user/bob/"><img alt="bob" width="32" height="32" src="data:image/gif;base64,R0lGODlhAQABAAAAACw="></a>
+    <a id="bob-1" href="/user/bob/"><span style="color: rgb(1, 2, 3)">bob</span></a>
+    <p>thanks <a id="mention" href="/u/alice">u/alice</a>, see <a id="sub" href="/r/test/">r/test</a> and <a id="tab" href="/user/bob/comments/">bob's comments</a></p>
+  </shreddit-comment>
+  <shreddit-comment author="Bob">
+    <a id="bob-2" href="https://www.reddit.com/user/Bob" style="font-weight: 700">Bob</a>
+  </shreddit-comment>
+  <shadow-card id="card"></shadow-card>
+  <script>
+    customElements.define('shadow-card', class extends HTMLElement {
+      connectedCallback() {
+        this.attachShadow({ mode: 'open' }).innerHTML = '<a id="inner" href="/user/carol/">carol</a>';
+      }
+    });
+    window.addLazyComment = () => {
+      const c = document.createElement('shreddit-comment');
+      c.innerHTML = '<a id="lazy" href="/user/dave/">dave</a>';
+      document.body.append(c);
+    };
+  </script>
+</body></html>

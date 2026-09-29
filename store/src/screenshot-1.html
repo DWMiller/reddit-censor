@@ -1,0 +1,16 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+  body { display: grid; grid-template-columns: 440px 1fr; align-items: center; }
+  .left { padding: 0 0 0 64px; display: flex; flex-direction: column; gap: 24px; }
+  .headline { font-size: 54px; }
+  .sub { font-size: 22px; }
+  .pane { padding: 0 56px 0 40px; }
+</style></head><body class="brand">
+  <div class="left">
+    <img class="logo" src="icon-small.svg">
+    <div class="headline">Hide every <span class="accent">username.</span></div>
+    <div class="sub">One click covers Reddit usernames and avatars, ready for a screenshot.</div>
+  </div>
+  <div class="pane"><div class="thread" data-post data-count="5" data-censored></div></div>
+  <script src="thread.js"></script>
+</body></html>

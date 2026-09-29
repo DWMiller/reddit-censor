@@ -1,0 +1,11 @@
+{
+  "name": "username-censor-for-reddit",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node test/run.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.55.0"
+  }
+}

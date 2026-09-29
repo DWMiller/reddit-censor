@@ -1,14 +1,30 @@
 {
-  "name": "Reddit Censor",
-  "description": "Censors reddit usernames for easily anonymized screenshots",
-  "version": "1.0",
-  "permissions": ["activeTab"],
+  "manifest_version": 3,
+  "name": "Username Censor for Reddit",
+  "version": "2.0.0",
+  "description": "Click the toolbar button to cover every Reddit username with a color block. Each user keeps one color, so threads stay readable.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["activeTab", "scripting"],
   "background": {
-    "scripts": ["index.js"],
-    "persistent": false
+    "service_worker": "index.js"
   },
-  "browser_action": {
-    "default_title": "Click to hide usernames"
+  "action": {
+    "default_title": "Hide Reddit usernames",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    }
   },
-  "manifest_version": 2
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+U"
+      }
+    }
+  }
 }
